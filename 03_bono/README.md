@@ -201,14 +201,14 @@ aux_info/  cmd_info.json  libParams/  lib_format_counts.json  logs/  quant.sf
 ```
 import pandas as pd
 e1 = pd.read_table('DRR100656のabundance.tsv')
-e1 = e1.drop(columns=['length', 'eff_length', 'est_counts'])
-e1.columns = ['target_id', 'TPM_DRR100656']
+e1 = e1.drop(columns=['Length', 'EffectiveLength', 'NumReads'])
+e1.columns = ['Name', 'TPM_DRR100656']
 e2 = pd.read_table('DRR100657のabundance.tsv')
-e2 = e2.drop(columns=['length', 'eff_length', 'est_counts'])
-e2.columns = ['target_id', 'TPM_DRR100657']
+e2 = e2.drop(columns=['Length', 'EffectiveLength', 'NumReads'])
+e2.columns = ['Name', 'TPM_DRR100657']
 
 # 二つのデータを'target_id'で結合
-e = pd.merge(e1, e2, on='target_id')
+e = pd.merge(e1, e2, on='Name')
 
 # DataFrameに必要なフィールドが含まれていることを確認
 e.head()
