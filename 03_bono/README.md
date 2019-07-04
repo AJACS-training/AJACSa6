@@ -200,12 +200,12 @@ aux_info/  cmd_info.json  libParams/  lib_format_counts.json  logs/  quant.sf
 
 ```
 import pandas as pd
-e1 = pd.read_table('SRR7300567のabundance.tsv')
+e1 = pd.read_table('DRR100656のabundance.tsv')
 e1 = e1.drop(columns=['length', 'eff_length', 'est_counts'])
-e1.columns = ['target_id', 'TPM_SRR7300567']
-e2 = pd.read_table('SRR7300569のabundance.tsv')
+e1.columns = ['target_id', 'TPM_DRR100656']
+e2 = pd.read_table('DRR100657のabundance.tsv')
 e2 = e2.drop(columns=['length', 'eff_length', 'est_counts'])
-e2.columns = ['target_id', 'TPM_SRR7300569']
+e2.columns = ['target_id', 'TPM_DRR100657']
 
 # 二つのデータを'target_id'で結合
 e = pd.merge(e1, e2, on='target_id')
@@ -218,9 +218,9 @@ e.head()
 ### matplotlibで散布図を描く
 
 ```
-plt.scatter(e.TPM_SRR7300567, e.TPM_SRR7300569)
-plt.xlabel("SRR7300567")
-plt.ylabel("SRR7300569")
+plt.scatter(e.TPM_DRR100656, e.TPM_DRR100657)
+plt.xlabel("DRR100656")
+plt.ylabel("DRR100657")
 ```
 
 ### seabornが好きなひとはこちら
@@ -228,10 +228,10 @@ plt.ylabel("SRR7300569")
 ```
 %matplotlib inline
 import seaborn as sns
-ax = sns.scatterplot(x="TPM_SRR7300567", y="TPM_SRR7300569", data=e)
+ax = sns.scatterplot(x="TPM_DRR100656", y="TPM_DRR100657", data=e)
 
 # jointplot
-sns.jointplot(e[("TPM_SRR7300567")], e[("TPM_SRR7300569")])
+sns.jointplot(e[("TPM_DRR100656")], e[("TPM_DRR100657")])
 
 ```
 
