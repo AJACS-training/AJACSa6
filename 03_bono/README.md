@@ -276,3 +276,5 @@ Docker Desktop for MacのインストーラーをDLして、表示される手�
 2. 上述のPythonコードを再利用して、salmonとkallistoでの発現定量値を比較する散布図を作成せよ
 3. その結果から言えるプログラムの特性を考察せよ
 4. さらに時間がある場合には、[HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)による発現定量も同じFASTQ配列に対して行い、salmonで計算した結果と比較解析せよ
+
+参考：Shizuoka-ngs/appendix [発現定量化ツールsalmonによる定量とkallistoとの比較](https://github.com/shizuoka-ngs/appendix/blob/master/kallisto_and_salmon.md)
