@@ -200,10 +200,10 @@ aux_info/  cmd_info.json  libParams/  lib_format_counts.json  logs/  quant.sf
 
 ```
 import pandas as pd
-e1 = pd.read_table('DRR100656のabundance.tsv')
+e1 = pd.read_table('salmon_output_DRR100656/quant.sf')
 e1 = e1.drop(columns=['Length', 'EffectiveLength', 'NumReads'])
 e1.columns = ['Name', 'TPM_DRR100656']
-e2 = pd.read_table('DRR100657のabundance.tsv')
+e2 = pd.read_table('salmon_output_DRR100657/quant.sf')
 e2 = e2.drop(columns=['Length', 'EffectiveLength', 'NumReads'])
 e2.columns = ['Name', 'TPM_DRR100657']
 
