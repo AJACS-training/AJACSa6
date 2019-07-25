@@ -218,6 +218,7 @@ e.head()
 ### matplotlibで散布図を描く
 
 ```
+import matplotlib.pyplot as plt
 plt.scatter(e.TPM_DRR100656, e.TPM_DRR100657)
 plt.xlabel("DRR100656")
 plt.ylabel("DRR100657")
